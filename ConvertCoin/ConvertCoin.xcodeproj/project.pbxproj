@@ -24,6 +24,11 @@
 		961651942940A577008E1575 /* ConvertCoinTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 961651932940A577008E1575 /* ConvertCoinTests.swift */; };
 		9616519E2940A577008E1575 /* ConvertCoinUITests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9616519D2940A577008E1575 /* ConvertCoinUITests.swift */; };
 		961651A02940A577008E1575 /* ConvertCoinUITestsLaunchTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9616519F2940A577008E1575 /* ConvertCoinUITestsLaunchTests.swift */; };
+		9692BB8029410FE200CAF3CC /* ExchangeUserDefault.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9692BB7F29410FE200CAF3CC /* ExchangeUserDefault.swift */; };
+		9692BB822941182600CAF3CC /* CoinConvertTableController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9692BB812941182600CAF3CC /* CoinConvertTableController.swift */; };
+		9692BB852941186400CAF3CC /* HistoryCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9692BB842941186400CAF3CC /* HistoryCell.swift */; };
+		96A0267B29410E0C00CCB001 /* String.swift in Sources */ = {isa = PBXBuildFile; fileRef = 96A0267A29410E0C00CCB001 /* String.swift */; };
+		96A0267D29410E1900CCB001 /* UIView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 96A0267C29410E1900CCB001 /* UIView.swift */; };
 		A1CAD89075A42F8EAEA8E8E6 /* Pods_ConvertCoin.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 329CA0089FDC0A9F67824299 /* Pods_ConvertCoin.framework */; };
 /* End PBXBuildFile section */
 
@@ -69,6 +74,11 @@
 		961651992940A577008E1575 /* ConvertCoinUITests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = ConvertCoinUITests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
 		9616519D2940A577008E1575 /* ConvertCoinUITests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ConvertCoinUITests.swift; sourceTree = "<group>"; };
 		9616519F2940A577008E1575 /* ConvertCoinUITestsLaunchTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ConvertCoinUITestsLaunchTests.swift; sourceTree = "<group>"; };
+		9692BB7F29410FE200CAF3CC /* ExchangeUserDefault.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ExchangeUserDefault.swift; sourceTree = "<group>"; };
+		9692BB812941182600CAF3CC /* CoinConvertTableController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CoinConvertTableController.swift; sourceTree = "<group>"; };
+		9692BB842941186400CAF3CC /* HistoryCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HistoryCell.swift; sourceTree = "<group>"; };
+		96A0267A29410E0C00CCB001 /* String.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = String.swift; sourceTree = "<group>"; };
+		96A0267C29410E1900CCB001 /* UIView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UIView.swift; sourceTree = "<group>"; };
 		A534E150B207AAE08B6F2210 /* Pods-ConvertCoinTests.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-ConvertCoinTests.release.xcconfig"; path = "Target Support Files/Pods-ConvertCoinTests/Pods-ConvertCoinTests.release.xcconfig"; sourceTree = "<group>"; };
 		A67BD6FAD0327CB4052B89AA /* Pods_ConvertCoin_ConvertCoinUITests.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_ConvertCoin_ConvertCoinUITests.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		E23842E8FD2F0160A72803DD /* Pods_ConvertCoinTests.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_ConvertCoinTests.framework; sourceTree = BUILT_PRODUCTS_DIR; };
@@ -103,12 +113,14 @@
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
-		9611FD732940D48E0090B28B /* Suport */ = {
+		9611FD732940D48E0090B28B /* Support */ = {
 			isa = PBXGroup;
 			children = (
+				96A0267E29410E5100CCB001 /* UserDefault */,
+				96A0267929410DF900CCB001 /* Extensions */,
 				9611FD742940D49F0090B28B /* Enum */,
 			);
-			path = Suport;
+			path = Support;
 			sourceTree = "<group>";
 		};
 		9611FD742940D49F0090B28B /* Enum */ = {
@@ -144,7 +156,7 @@
 		961651782940A574008E1575 /* ConvertCoin */ = {
 			isa = PBXGroup;
 			children = (
-				9611FD732940D48E0090B28B /* Suport */,
+				9611FD732940D48E0090B28B /* Support */,
 				961651AC2940A5F8008E1575 /* Controller */,
 				961651AD2940A607008E1575 /* Model */,
 				961651AE2940A613008E1575 /* View */,
@@ -179,8 +191,10 @@
 		961651AC2940A5F8008E1575 /* Controller */ = {
 			isa = PBXGroup;
 			children = (
+				9692BB832941184600CAF3CC /* Cell */,
 				9616517D2940A574008E1575 /* ViewController.swift */,
 				9611FD6B2940C2D00090B28B /* CoinConverterController.swift */,
+				9692BB812941182600CAF3CC /* CoinConvertTableController.swift */,
 			);
 			path = Controller;
 			sourceTree = "<group>";
@@ -224,6 +238,31 @@
 				9616517B2940A574008E1575 /* SceneDelegate.swift */,
 			);
 			path = Delegate;
+			sourceTree = "<group>";
+		};
+		9692BB832941184600CAF3CC /* Cell */ = {
+			isa = PBXGroup;
+			children = (
+				9692BB842941186400CAF3CC /* HistoryCell.swift */,
+			);
+			path = Cell;
+			sourceTree = "<group>";
+		};
+		96A0267929410DF900CCB001 /* Extensions */ = {
+			isa = PBXGroup;
+			children = (
+				96A0267A29410E0C00CCB001 /* String.swift */,
+				96A0267C29410E1900CCB001 /* UIView.swift */,
+			);
+			path = Extensions;
+			sourceTree = "<group>";
+		};
+		96A0267E29410E5100CCB001 /* UserDefault */ = {
+			isa = PBXGroup;
+			children = (
+				9692BB7F29410FE200CAF3CC /* ExchangeUserDefault.swift */,
+			);
+			path = UserDefault;
 			sourceTree = "<group>";
 		};
 		BE6640ADB6893B7A609919D7 /* Frameworks */ = {
@@ -488,11 +527,16 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				9692BB822941182600CAF3CC /* CoinConvertTableController.swift in Sources */,
 				9616517E2940A574008E1575 /* ViewController.swift in Sources */,
 				9611FD782940D4EA0090B28B /* CoinConverterViewModel.swift in Sources */,
+				96A0267D29410E1900CCB001 /* UIView.swift in Sources */,
+				96A0267B29410E0C00CCB001 /* String.swift in Sources */,
 				9616517A2940A574008E1575 /* AppDelegate.swift in Sources */,
 				9611FD722940D31E0090B28B /* WebService.swift in Sources */,
 				961651842940A574008E1575 /* ConvertCoin.xcdatamodeld in Sources */,
+				9692BB852941186400CAF3CC /* HistoryCell.swift in Sources */,
+				9692BB8029410FE200CAF3CC /* ExchangeUserDefault.swift in Sources */,
 				9611FD702940CC3B0090B28B /* CoinResponse.swift in Sources */,
 				9611FD6C2940C2D00090B28B /* CoinConverterController.swift in Sources */,
 				9611FD762940D4C30090B28B /* Enums.swift in Sources */,
