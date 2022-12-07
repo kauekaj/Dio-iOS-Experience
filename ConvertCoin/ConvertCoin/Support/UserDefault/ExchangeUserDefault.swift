@@ -9,7 +9,7 @@ import Foundation
 
 class ExchangeUserDefault {
     
-    let kHistory:String = "kHistory"
+    let kHistory: String = "kHistory"
     
     public func save(listCoins:[Coin]) {
         do {
