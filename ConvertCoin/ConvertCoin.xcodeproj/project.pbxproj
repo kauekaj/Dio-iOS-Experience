@@ -11,6 +11,10 @@
 		7297A443D2BD7517AEC8527B /* Pods_ConvertCoin_ConvertCoinUITests.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = A67BD6FAD0327CB4052B89AA /* Pods_ConvertCoin_ConvertCoinUITests.framework */; };
 		9611FD6C2940C2D00090B28B /* CoinConverterController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9611FD6B2940C2D00090B28B /* CoinConverterController.swift */; };
 		9611FD6E2940C3800090B28B /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 9611FD6D2940C3800090B28B /* Main.storyboard */; };
+		9611FD702940CC3B0090B28B /* CoinResponse.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9611FD6F2940CC3B0090B28B /* CoinResponse.swift */; };
+		9611FD722940D31E0090B28B /* WebService.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9611FD712940D31E0090B28B /* WebService.swift */; };
+		9611FD762940D4C30090B28B /* Enums.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9611FD752940D4C30090B28B /* Enums.swift */; };
+		9611FD782940D4EA0090B28B /* CoinConverterViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9611FD772940D4EA0090B28B /* CoinConverterViewModel.swift */; };
 		9616517A2940A574008E1575 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 961651792940A574008E1575 /* AppDelegate.swift */; };
 		9616517C2940A574008E1575 /* SceneDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9616517B2940A574008E1575 /* SceneDelegate.swift */; };
 		9616517E2940A574008E1575 /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9616517D2940A574008E1575 /* ViewController.swift */; };
@@ -48,6 +52,10 @@
 		6505CDC13F0C556ACE2467D2 /* Pods-ConvertCoin.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-ConvertCoin.debug.xcconfig"; path = "Target Support Files/Pods-ConvertCoin/Pods-ConvertCoin.debug.xcconfig"; sourceTree = "<group>"; };
 		9611FD6B2940C2D00090B28B /* CoinConverterController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CoinConverterController.swift; sourceTree = "<group>"; };
 		9611FD6D2940C3800090B28B /* Main.storyboard */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.storyboard; path = Main.storyboard; sourceTree = "<group>"; };
+		9611FD6F2940CC3B0090B28B /* CoinResponse.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CoinResponse.swift; sourceTree = "<group>"; };
+		9611FD712940D31E0090B28B /* WebService.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = WebService.swift; sourceTree = "<group>"; };
+		9611FD752940D4C30090B28B /* Enums.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Enums.swift; sourceTree = "<group>"; };
+		9611FD772940D4EA0090B28B /* CoinConverterViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CoinConverterViewModel.swift; sourceTree = "<group>"; };
 		961651762940A574008E1575 /* ConvertCoin.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = ConvertCoin.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		961651792940A574008E1575 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		9616517B2940A574008E1575 /* SceneDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SceneDelegate.swift; sourceTree = "<group>"; };
@@ -95,6 +103,22 @@
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		9611FD732940D48E0090B28B /* Suport */ = {
+			isa = PBXGroup;
+			children = (
+				9611FD742940D49F0090B28B /* Enum */,
+			);
+			path = Suport;
+			sourceTree = "<group>";
+		};
+		9611FD742940D49F0090B28B /* Enum */ = {
+			isa = PBXGroup;
+			children = (
+				9611FD752940D4C30090B28B /* Enums.swift */,
+			);
+			path = Enum;
+			sourceTree = "<group>";
+		};
 		9616516D2940A574008E1575 = {
 			isa = PBXGroup;
 			children = (
@@ -120,6 +144,7 @@
 		961651782940A574008E1575 /* ConvertCoin */ = {
 			isa = PBXGroup;
 			children = (
+				9611FD732940D48E0090B28B /* Suport */,
 				961651AC2940A5F8008E1575 /* Controller */,
 				961651AD2940A607008E1575 /* Model */,
 				961651AE2940A613008E1575 /* View */,
@@ -163,6 +188,7 @@
 		961651AD2940A607008E1575 /* Model */ = {
 			isa = PBXGroup;
 			children = (
+				9611FD6F2940CC3B0090B28B /* CoinResponse.swift */,
 			);
 			path = Model;
 			sourceTree = "<group>";
@@ -178,6 +204,7 @@
 		961651AF2940A624008E1575 /* ViewModel */ = {
 			isa = PBXGroup;
 			children = (
+				9611FD772940D4EA0090B28B /* CoinConverterViewModel.swift */,
 			);
 			path = ViewModel;
 			sourceTree = "<group>";
@@ -185,6 +212,7 @@
 		961651B02940A630008E1575 /* WebService */ = {
 			isa = PBXGroup;
 			children = (
+				9611FD712940D31E0090B28B /* WebService.swift */,
 			);
 			path = WebService;
 			sourceTree = "<group>";
@@ -461,9 +489,13 @@
 			buildActionMask = 2147483647;
 			files = (
 				9616517E2940A574008E1575 /* ViewController.swift in Sources */,
+				9611FD782940D4EA0090B28B /* CoinConverterViewModel.swift in Sources */,
 				9616517A2940A574008E1575 /* AppDelegate.swift in Sources */,
+				9611FD722940D31E0090B28B /* WebService.swift in Sources */,
 				961651842940A574008E1575 /* ConvertCoin.xcdatamodeld in Sources */,
+				9611FD702940CC3B0090B28B /* CoinResponse.swift in Sources */,
 				9611FD6C2940C2D00090B28B /* CoinConverterController.swift in Sources */,
+				9611FD762940D4C30090B28B /* Enums.swift in Sources */,
 				9616517C2940A574008E1575 /* SceneDelegate.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
