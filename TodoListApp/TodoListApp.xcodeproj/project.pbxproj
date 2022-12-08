@@ -20,6 +20,9 @@
 		9692BBB4294141A500CAF3CC /* TodoListAppUITests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9692BBB3294141A500CAF3CC /* TodoListAppUITests.swift */; };
 		9692BBB6294141A500CAF3CC /* TodoListAppUITestsLaunchTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9692BBB5294141A500CAF3CC /* TodoListAppUITestsLaunchTests.swift */; };
 		969EABA629421D7000984EB1 /* InitialTasks.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 969EABA529421D7000984EB1 /* InitialTasks.storyboard */; };
+		969EABA829422DB400984EB1 /* LoginViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 969EABA729422DB400984EB1 /* LoginViewController.swift */; };
+		969EABAA29422DEA00984EB1 /* ListTaskViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 969EABA929422DEA00984EB1 /* ListTaskViewController.swift */; };
+		969EABAC29422E2100984EB1 /* TaskManagerTableViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 969EABAB29422E2100984EB1 /* TaskManagerTableViewController.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -59,6 +62,9 @@
 		9692BBB3294141A500CAF3CC /* TodoListAppUITests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TodoListAppUITests.swift; sourceTree = "<group>"; };
 		9692BBB5294141A500CAF3CC /* TodoListAppUITestsLaunchTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TodoListAppUITestsLaunchTests.swift; sourceTree = "<group>"; };
 		969EABA529421D7000984EB1 /* InitialTasks.storyboard */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; path = InitialTasks.storyboard; sourceTree = "<group>"; };
+		969EABA729422DB400984EB1 /* LoginViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LoginViewController.swift; sourceTree = "<group>"; };
+		969EABA929422DEA00984EB1 /* ListTaskViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ListTaskViewController.swift; sourceTree = "<group>"; };
+		969EABAB29422E2100984EB1 /* TaskManagerTableViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TaskManagerTableViewController.swift; sourceTree = "<group>"; };
 		A409FD573051209F1156D30F /* Pods-TodoListAppTests.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-TodoListAppTests.debug.xcconfig"; path = "Target Support Files/Pods-TodoListAppTests/Pods-TodoListAppTests.debug.xcconfig"; sourceTree = "<group>"; };
 		B63A054D41265295AF23C261 /* Pods-TodoListAppTests.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-TodoListAppTests.release.xcconfig"; path = "Target Support Files/Pods-TodoListAppTests/Pods-TodoListAppTests.release.xcconfig"; sourceTree = "<group>"; };
 		C307DD9D9672E54279DA94EC /* Pods_TodoListApp.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_TodoListApp.framework; sourceTree = BUILT_PRODUCTS_DIR; };
@@ -188,6 +194,9 @@
 		9692BBC9294142D400CAF3CC /* Controller */ = {
 			isa = PBXGroup;
 			children = (
+				969EABA729422DB400984EB1 /* LoginViewController.swift */,
+				969EABA929422DEA00984EB1 /* ListTaskViewController.swift */,
+				969EABAB29422E2100984EB1 /* TaskManagerTableViewController.swift */,
 			);
 			path = Controller;
 			sourceTree = "<group>";
@@ -442,8 +451,11 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				969EABA829422DB400984EB1 /* LoginViewController.swift in Sources */,
 				9692BB97294141A400CAF3CC /* ViewController.swift in Sources */,
 				9692BB93294141A400CAF3CC /* AppDelegate.swift in Sources */,
+				969EABAA29422DEA00984EB1 /* ListTaskViewController.swift in Sources */,
+				969EABAC29422E2100984EB1 /* TaskManagerTableViewController.swift in Sources */,
 				9692BB95294141A400CAF3CC /* SceneDelegate.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
