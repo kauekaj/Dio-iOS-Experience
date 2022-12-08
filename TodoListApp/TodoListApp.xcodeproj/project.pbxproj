@@ -19,6 +19,8 @@
 		9692BBAA294141A500CAF3CC /* TodoListAppTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9692BBA9294141A500CAF3CC /* TodoListAppTests.swift */; };
 		9692BBB4294141A500CAF3CC /* TodoListAppUITests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9692BBB3294141A500CAF3CC /* TodoListAppUITests.swift */; };
 		9692BBB6294141A500CAF3CC /* TodoListAppUITestsLaunchTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9692BBB5294141A500CAF3CC /* TodoListAppUITestsLaunchTests.swift */; };
+		9697C858294251CF00B37015 /* EmptyTableCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9697C856294251CF00B37015 /* EmptyTableCell.swift */; };
+		9697C859294251CF00B37015 /* EmptyTableCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = 9697C857294251CF00B37015 /* EmptyTableCell.xib */; };
 		969EABA629421D7000984EB1 /* InitialTasks.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 969EABA529421D7000984EB1 /* InitialTasks.storyboard */; };
 		969EABA829422DB400984EB1 /* LoginViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 969EABA729422DB400984EB1 /* LoginViewController.swift */; };
 		969EABAA29422DEA00984EB1 /* ListTaskViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 969EABA929422DEA00984EB1 /* ListTaskViewController.swift */; };
@@ -61,6 +63,8 @@
 		9692BBAF294141A500CAF3CC /* TodoListAppUITests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = TodoListAppUITests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
 		9692BBB3294141A500CAF3CC /* TodoListAppUITests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TodoListAppUITests.swift; sourceTree = "<group>"; };
 		9692BBB5294141A500CAF3CC /* TodoListAppUITestsLaunchTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TodoListAppUITestsLaunchTests.swift; sourceTree = "<group>"; };
+		9697C856294251CF00B37015 /* EmptyTableCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = EmptyTableCell.swift; sourceTree = "<group>"; };
+		9697C857294251CF00B37015 /* EmptyTableCell.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = EmptyTableCell.xib; sourceTree = "<group>"; };
 		969EABA529421D7000984EB1 /* InitialTasks.storyboard */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; path = InitialTasks.storyboard; sourceTree = "<group>"; };
 		969EABA729422DB400984EB1 /* LoginViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LoginViewController.swift; sourceTree = "<group>"; };
 		969EABA929422DEA00984EB1 /* ListTaskViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ListTaskViewController.swift; sourceTree = "<group>"; };
@@ -186,6 +190,7 @@
 		9692BBC8294142CC00CAF3CC /* View */ = {
 			isa = PBXGroup;
 			children = (
+				9697C8552942518900B37015 /* Cell */,
 				969EABA529421D7000984EB1 /* InitialTasks.storyboard */,
 			);
 			path = View;
@@ -199,6 +204,15 @@
 				969EABAB29422E2100984EB1 /* TaskManagerTableViewController.swift */,
 			);
 			path = Controller;
+			sourceTree = "<group>";
+		};
+		9697C8552942518900B37015 /* Cell */ = {
+			isa = PBXGroup;
+			children = (
+				9697C856294251CF00B37015 /* EmptyTableCell.swift */,
+				9697C857294251CF00B37015 /* EmptyTableCell.xib */,
+			);
+			path = Cell;
 			sourceTree = "<group>";
 		};
 		E98110A9773C14AAB9AC8782 /* Frameworks */ = {
@@ -323,6 +337,7 @@
 				9692BB9F294141A400CAF3CC /* LaunchScreen.storyboard in Resources */,
 				9692BB9C294141A400CAF3CC /* Assets.xcassets in Resources */,
 				969EABA629421D7000984EB1 /* InitialTasks.storyboard in Resources */,
+				9697C859294251CF00B37015 /* EmptyTableCell.xib in Resources */,
 				9692BB9A294141A400CAF3CC /* Main.storyboard in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -453,6 +468,7 @@
 			files = (
 				969EABA829422DB400984EB1 /* LoginViewController.swift in Sources */,
 				9692BB97294141A400CAF3CC /* ViewController.swift in Sources */,
+				9697C858294251CF00B37015 /* EmptyTableCell.swift in Sources */,
 				9692BB93294141A400CAF3CC /* AppDelegate.swift in Sources */,
 				969EABAA29422DEA00984EB1 /* ListTaskViewController.swift in Sources */,
 				969EABAC29422E2100984EB1 /* TaskManagerTableViewController.swift in Sources */,
