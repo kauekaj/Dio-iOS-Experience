@@ -26,6 +26,8 @@
 		969EABA829422DB400984EB1 /* LoginViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 969EABA729422DB400984EB1 /* LoginViewController.swift */; };
 		969EABAA29422DEA00984EB1 /* ListTaskViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 969EABA929422DEA00984EB1 /* ListTaskViewController.swift */; };
 		969EABAC29422E2100984EB1 /* TaskManagerTableViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 969EABAB29422E2100984EB1 /* TaskManagerTableViewController.swift */; };
+		96AACE3929475A0E00BC0C2A /* TimePicker.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 96AACE3829475A0E00BC0C2A /* TimePicker.storyboard */; };
+		96AACE3B29475A4D00BC0C2A /* TimePickerController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 96AACE3A29475A4D00BC0C2A /* TimePickerController.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -71,6 +73,8 @@
 		969EABA729422DB400984EB1 /* LoginViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LoginViewController.swift; sourceTree = "<group>"; };
 		969EABA929422DEA00984EB1 /* ListTaskViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ListTaskViewController.swift; sourceTree = "<group>"; };
 		969EABAB29422E2100984EB1 /* TaskManagerTableViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TaskManagerTableViewController.swift; sourceTree = "<group>"; };
+		96AACE3829475A0E00BC0C2A /* TimePicker.storyboard */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; path = TimePicker.storyboard; sourceTree = "<group>"; };
+		96AACE3A29475A4D00BC0C2A /* TimePickerController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TimePickerController.swift; sourceTree = "<group>"; };
 		A409FD573051209F1156D30F /* Pods-TodoListAppTests.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-TodoListAppTests.debug.xcconfig"; path = "Target Support Files/Pods-TodoListAppTests/Pods-TodoListAppTests.debug.xcconfig"; sourceTree = "<group>"; };
 		B63A054D41265295AF23C261 /* Pods-TodoListAppTests.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-TodoListAppTests.release.xcconfig"; path = "Target Support Files/Pods-TodoListAppTests/Pods-TodoListAppTests.release.xcconfig"; sourceTree = "<group>"; };
 		C307DD9D9672E54279DA94EC /* Pods_TodoListApp.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_TodoListApp.framework; sourceTree = BUILT_PRODUCTS_DIR; };
@@ -175,6 +179,7 @@
 		9692BBC62941426F00CAF3CC /* Sources */ = {
 			isa = PBXGroup;
 			children = (
+				96AACE37294759F300BC0C2A /* Components */,
 				9692BBC9294142D400CAF3CC /* Controller */,
 				9692BBC8294142CC00CAF3CC /* View */,
 				9692BBC7294142C500CAF3CC /* Model */,
@@ -216,6 +221,15 @@
 				9697C85A29425C6400B37015 /* TaskTableCell.swift */,
 			);
 			path = Cell;
+			sourceTree = "<group>";
+		};
+		96AACE37294759F300BC0C2A /* Components */ = {
+			isa = PBXGroup;
+			children = (
+				96AACE3829475A0E00BC0C2A /* TimePicker.storyboard */,
+				96AACE3A29475A4D00BC0C2A /* TimePickerController.swift */,
+			);
+			path = Components;
 			sourceTree = "<group>";
 		};
 		E98110A9773C14AAB9AC8782 /* Frameworks */ = {
@@ -342,6 +356,7 @@
 				969EABA629421D7000984EB1 /* InitialTasks.storyboard in Resources */,
 				9697C859294251CF00B37015 /* EmptyTableCell.xib in Resources */,
 				9692BB9A294141A400CAF3CC /* Main.storyboard in Resources */,
+				96AACE3929475A0E00BC0C2A /* TimePicker.storyboard in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -470,6 +485,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				969EABA829422DB400984EB1 /* LoginViewController.swift in Sources */,
+				96AACE3B29475A4D00BC0C2A /* TimePickerController.swift in Sources */,
 				9697C85B29425C6400B37015 /* TaskTableCell.swift in Sources */,
 				9692BB97294141A400CAF3CC /* ViewController.swift in Sources */,
 				9697C858294251CF00B37015 /* EmptyTableCell.swift in Sources */,

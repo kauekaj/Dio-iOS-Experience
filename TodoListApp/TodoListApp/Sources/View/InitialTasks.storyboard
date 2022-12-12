@@ -207,6 +207,9 @@
                                                             </hierarchicalColors>
                                                         </imageReference>
                                                     </buttonConfiguration>
+                                                    <connections>
+                                                        <action selector="goBack:" destination="Syn-XN-Pye" eventType="touchUpInside" id="bCb-5u-wCD"/>
+                                                    </connections>
                                                 </button>
                                                 <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Crie sua tarefa" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="6MW-uE-iol">
                                                     <rect key="frame" x="20" y="79" width="184" height="30"/>
@@ -316,6 +319,9 @@
                                                     <buttonConfiguration key="configuration" style="plain" title="Horário">
                                                         <fontDescription key="titleFontDescription" type="system" pointSize="20"/>
                                                     </buttonConfiguration>
+                                                    <connections>
+                                                        <action selector="openComponent:" destination="Syn-XN-Pye" eventType="touchUpInside" id="5Jx-iG-TjF"/>
+                                                    </connections>
                                                 </button>
                                             </subviews>
                                             <constraints>
@@ -345,6 +351,9 @@
                                                     <buttonConfiguration key="configuration" style="plain" title="SALVAR">
                                                         <fontDescription key="titleFontDescription" type="system" weight="black" pointSize="11"/>
                                                     </buttonConfiguration>
+                                                    <connections>
+                                                        <action selector="createTask:" destination="Syn-XN-Pye" eventType="touchUpInside" id="Fyu-CN-TcR"/>
+                                                    </connections>
                                                 </button>
                                                 <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="y1n-vm-YBo">
                                                     <rect key="frame" x="218" y="30" width="85" height="35"/>
@@ -358,6 +367,9 @@
                                                     <buttonConfiguration key="configuration" style="plain" title="EXCLUIR">
                                                         <fontDescription key="titleFontDescription" type="system" weight="black" pointSize="10"/>
                                                     </buttonConfiguration>
+                                                    <connections>
+                                                        <action selector="deleteTask:" destination="Syn-XN-Pye" eventType="touchUpInside" id="brF-xJ-X96"/>
+                                                    </connections>
                                                 </button>
                                             </subviews>
                                             <constraints>
@@ -377,10 +389,26 @@
                         </connections>
                     </tableView>
                     <navigationItem key="navigationItem" id="0xw-sY-gx7"/>
+                    <connections>
+                        <outlet property="btnTime" destination="Jr9-Qp-LKX" id="cMF-tH-jyp"/>
+                        <outlet property="btnTitle" destination="ZGB-mT-XWV" id="HK5-mb-Spo"/>
+                        <outlet property="calendar" destination="Jpv-iO-Qii" id="bWe-dc-9br"/>
+                        <segue destination="oXL-rM-P0B" kind="presentation" identifier="segueComponentTime" modalPresentationStyle="overFullScreen" id="3U0-Nc-eC6"/>
+                    </connections>
                 </tableViewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="zmr-p3-qKF" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
             </objects>
             <point key="canvasLocation" x="103" y="148"/>
+        </scene>
+        <!--TimePicker-->
+        <scene sceneID="K0r-3N-gjp">
+            <objects>
+                <viewControllerPlaceholder storyboardName="TimePicker" id="oXL-rM-P0B" sceneMemberID="viewController">
+                    <navigationItem key="navigationItem" id="mUB-bO-Li4"/>
+                </viewControllerPlaceholder>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="owf-Ek-77O" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="712" y="148"/>
         </scene>
     </scenes>
     <resources>
