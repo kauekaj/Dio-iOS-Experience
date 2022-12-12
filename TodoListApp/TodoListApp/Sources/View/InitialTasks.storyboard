@@ -135,6 +135,11 @@
                                                 <constraint firstItem="cZ6-jd-2iI" firstAttribute="leading" secondItem="mnV-B9-Qel" secondAttribute="leading" id="vMd-YJ-nH4"/>
                                             </constraints>
                                         </tableViewCellContentView>
+                                        <connections>
+                                            <outlet property="dateLabel" destination="22o-Zm-ZmP" id="TF5-uJ-Dgo"/>
+                                            <outlet property="hourLabel" destination="dQg-Y6-rIP" id="UvH-fA-y90"/>
+                                            <outlet property="titleLabel" destination="ALy-qk-mwn" id="gzI-xo-KgY"/>
+                                        </connections>
                                     </tableViewCell>
                                 </prototypes>
                             </tableView>
@@ -390,6 +395,7 @@
                     </tableView>
                     <navigationItem key="navigationItem" id="0xw-sY-gx7"/>
                     <connections>
+                        <outlet property="btnRemove" destination="y1n-vm-YBo" id="huh-pt-26o"/>
                         <outlet property="btnTime" destination="Jr9-Qp-LKX" id="cMF-tH-jyp"/>
                         <outlet property="btnTitle" destination="ZGB-mT-XWV" id="HK5-mb-Spo"/>
                         <outlet property="calendar" destination="Jpv-iO-Qii" id="bWe-dc-9br"/>

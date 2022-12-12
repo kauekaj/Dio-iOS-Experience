@@ -13,13 +13,20 @@ class TaskManagerTableViewController: UITableViewController {
     @IBOutlet weak var btnTitle: UITextField!
     @IBOutlet weak var calendar: FSCalendar!
     @IBOutlet weak var btnTime: UIButton!
+    @IBOutlet weak var btnRemove: UIButton!
+
+    
+    //MARK: Var/Let
+    private var time: String = ""
+    private var date: String = ""
+    public var task: Task?
     
     // MARK: - Life Cycle
     override func viewDidLoad() {
         super.viewDidLoad()
         
         self.calendar.delegate = self
-
+        self.configView()
     }
 
     override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
@@ -39,12 +46,42 @@ class TaskManagerTableViewController: UITableViewController {
     }
     
     @IBAction func deleteTask(_ sender: Any) {
-        
+        TaskDefaultHelper().deleteTaskList(task: self.task!)
+        self.dismiss(animated: true)
     }
     
     
     @IBAction func createTask(_ sender: Any) {
-        
+        createNewTask()
+    }
+    
+    
+    //MARK: - Methods
+    private func configView() {
+        self.btnRemove.isHidden = self.task == nil
+        guard let auxTask = self.task else { return }
+        self.btnTime.setTitle(auxTask.hour, for: .normal)
+        self.btnTitle.text = auxTask.title
+        self.date = auxTask.date
+        self.time = auxTask.hour
+    }
+    
+    private func createNewTask() {
+        if self.task != nil {
+            self.task!.date = self.date
+            self.task!.hour = self.time
+            self.task!.title = self.btnTitle.text!
+            
+            TaskDefaultHelper().updateTask(task: self.task!)
+        } else {
+            var list: [Task] = TaskDefaultHelper().getTaskList()
+            let task: Task = Task(id: TaskDefaultHelper().getNextId(), title: self.btnTitle.text ?? "SEM TÍTULO", hour: self.time, date: self.date)
+            
+            list.append(task)
+            
+            TaskDefaultHelper().saveTaskList(taskList: list)
+        }
+        self.dismiss(animated: true)
     }
 
 }
@@ -64,12 +101,34 @@ extension TaskManagerTableViewController {
 extension TaskManagerTableViewController: TimePickerProtocol {
     func sendTime(time: String) {
         self.btnTime.setTitle(time, for: .normal)
+        self.time = time
     }
 }
 
 
-extension TaskManagerTableViewController: FSCalendarDelegate {
+extension TaskManagerTableViewController: FSCalendarDelegate, FSCalendarDelegateAppearance {
     func calendar(_ calendar: FSCalendar, didSelect date: Date, at monthPosition: FSCalendarMonthPosition) {
-        print(Date().convertdateToString(date: date, dateFormatter: "dd/MM/yyyy"))
+        self.date = Date().convertdateToString(date: date, dateFormatter: "dd/MM/yyyy")
     }
+    
+    func calendar(_ calendar: FSCalendar, appearance: FSCalendarAppearance, fillDefaultColorFor date: Date) -> UIColor? {
+        let auxDate = Date().convertdateToString(date: date, dateFormatter: "dd/MM/yyyy")
+        if self.task != nil {
+            if self.date == auxDate {
+                return .green
+            }
+        }
+        return nil
+    }
+    
+    func calendar(_ calendar: FSCalendar, appearance: FSCalendarAppearance, titleDefaultColorFor date: Date) -> UIColor? {
+        let auxDate = Date().convertdateToString(date: date, dateFormatter: "dd/MM/yyyy")
+        if self.task != nil {
+            if self.date == auxDate {
+                return .black
+            }
+        }
+        return nil
+    }
+    
 }

@@ -9,6 +9,10 @@ import UIKit
 
 class TaskTableCell: UITableViewCell {
 
+    @IBOutlet weak var titleLabel: UILabel!
+    @IBOutlet weak var hourLabel: UILabel!
+    @IBOutlet weak var dateLabel: UILabel!
+    
     override func awakeFromNib() {
         super.awakeFromNib()
     }
@@ -18,4 +22,9 @@ class TaskTableCell: UITableViewCell {
 
     }
 
+    public func setupCell(titleLabel: String, hourLabel:String, dataLabel: String) {
+        self.titleLabel.text = titleLabel
+        self.hourLabel.text = hourLabel
+        self.dateLabel.text = dataLabel
+    }
 }

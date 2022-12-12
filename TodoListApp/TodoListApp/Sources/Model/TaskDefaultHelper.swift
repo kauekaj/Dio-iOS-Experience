@@ -33,12 +33,32 @@ class TaskDefaultHelper {
         return []
     }
     
-    public func updateTask() {
-        
+    public func updateTask(task: Task) {
+        var list: [Task] = self.getTaskList()
+        list.removeAll() { taskList in
+            return taskList.id == task.id
+        }
+        list.append(task)
+        self.saveTaskList(taskList: list)
     }
     
-    public func deleteTaskList() {
-        
+    public func deleteTaskList(task: Task) {
+        var list: [Task] = self.getTaskList()
+        list.removeAll() { taskList in
+            return taskList.id == task.id
+        }
+        self.saveTaskList(taskList: list)
+    }
+    
+    public func getNextId() -> Int {
+        let list: [Task] = self.getTaskList()
+        for index in 0...list.count {
+            let auxList = list.filter { $0.id == index }
+            if auxList.count == 0 {
+                return index
+            }
+        }
+        return 0
     }
     
 }
