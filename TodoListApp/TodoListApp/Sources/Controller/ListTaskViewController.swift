@@ -8,23 +8,37 @@
 import UIKit
 
 class ListTaskViewController: UIViewController {
-
+    
     
     //MARK: IBOutlet
     @IBOutlet weak var btnAdd: UIButton!
     @IBOutlet weak var tableView: UITableView!
+    
+    //MARK: Var/Let
+    private var list: [Task] = []
+    
     
     //MARK: Life Cycle
     override func viewDidLoad() {
         super.viewDidLoad()
         self.tableView.delegate = self
         self.tableView.dataSource = self
+        
         self.registerNib()
+    }
+    
+    override func viewDidAppear(_ animated: Bool) {
+        loadItens()
     }
     
     //MARK: Action
     private func registerNib() {
         self.tableView.register(UINib(nibName: "EmptyTableCell", bundle: nil), forCellReuseIdentifier: "emptyTaskCell")
+    }
+    
+    private func loadItens() {
+        self.list = TaskDefaultHelper().getTaskList()
+        self.tableView.reloadData()
     }
     
     //MARK: Action
@@ -37,20 +51,31 @@ class ListTaskViewController: UIViewController {
 //MARK: UITableViewDelegate & UITableViewDataSource
 extension ListTaskViewController: UITableViewDelegate, UITableViewDataSource {
     func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
-        10
+        return self.list.count > 0 ? self.list.count : 1
     }
     
     func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
-        let cell: TaskTableCell = tableView.dequeueReusableCell(withIdentifier: "cellTask", for: indexPath) as! TaskTableCell
-//        let cell: EmptyTableCell = tableView.dequeueReusableCell(withIdentifier: "emptyTaskCell", for: indexPath) as! EmptyTableCell
-        return cell
+        if self.list.count > 0 {
+            let cell: TaskTableCell = tableView.dequeueReusableCell(withIdentifier: "cellTask", for: indexPath) as! TaskTableCell
+            return cell
+        } else {
+            let cell: EmptyTableCell = tableView.dequeueReusableCell(withIdentifier: "emptyTaskCell", for: indexPath) as! EmptyTableCell
+            return cell
+            
+        }
     }
     
     func tableView(_ tableView: UITableView, heightForRowAt indexPath: IndexPath) -> CGFloat {
-        return 103 // 127
+        return self.list.count > 0 ? 103 : 127
     }
     
     func tableView(_ tableView: UITableView, didSelectRowAt indexPath: IndexPath) {
-        print("Indexpath: \(indexPath.row)")
+        if self.list.count > 0 {
+            
+        } else {
+            self.performSegue(withIdentifier: "createNewTaskSegue", sender: nil)
+            
+        }
+        
     }
 }
