@@ -17,6 +17,8 @@ class TaskManagerTableViewController: UITableViewController {
     // MARK: - Life Cycle
     override func viewDidLoad() {
         super.viewDidLoad()
+        
+        self.calendar.delegate = self
 
     }
 
@@ -29,7 +31,7 @@ class TaskManagerTableViewController: UITableViewController {
     
     //MARK: - IBAction
     @IBAction func goBack(_ sender: Any) {
-        
+        self.dismiss(animated: true)
     }
     
     @IBAction func openComponent(_ sender: Any) {
@@ -63,6 +65,11 @@ extension TaskManagerTableViewController: TimePickerProtocol {
     func sendTime(time: String) {
         self.btnTime.setTitle(time, for: .normal)
     }
-    
-    
+}
+
+
+extension TaskManagerTableViewController: FSCalendarDelegate {
+    func calendar(_ calendar: FSCalendar, didSelect date: Date, at monthPosition: FSCalendarMonthPosition) {
+        print(Date().convertdateToString(date: date, dateFormatter: "dd/MM/yyyy"))
+    }
 }

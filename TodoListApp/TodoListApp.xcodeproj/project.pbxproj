@@ -22,6 +22,8 @@
 		9697C858294251CF00B37015 /* EmptyTableCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9697C856294251CF00B37015 /* EmptyTableCell.swift */; };
 		9697C859294251CF00B37015 /* EmptyTableCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = 9697C857294251CF00B37015 /* EmptyTableCell.xib */; };
 		9697C85B29425C6400B37015 /* TaskTableCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9697C85A29425C6400B37015 /* TaskTableCell.swift */; };
+		9698326E29479CEF0017AAB4 /* Task.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9698326D29479CEF0017AAB4 /* Task.swift */; };
+		9698327029479DF70017AAB4 /* TaskDefaultHelper.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9698326F29479DF70017AAB4 /* TaskDefaultHelper.swift */; };
 		969EABA629421D7000984EB1 /* InitialTasks.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 969EABA529421D7000984EB1 /* InitialTasks.storyboard */; };
 		969EABA829422DB400984EB1 /* LoginViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 969EABA729422DB400984EB1 /* LoginViewController.swift */; };
 		969EABAA29422DEA00984EB1 /* ListTaskViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 969EABA929422DEA00984EB1 /* ListTaskViewController.swift */; };
@@ -70,6 +72,8 @@
 		9697C856294251CF00B37015 /* EmptyTableCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = EmptyTableCell.swift; sourceTree = "<group>"; };
 		9697C857294251CF00B37015 /* EmptyTableCell.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = EmptyTableCell.xib; sourceTree = "<group>"; };
 		9697C85A29425C6400B37015 /* TaskTableCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TaskTableCell.swift; sourceTree = "<group>"; };
+		9698326D29479CEF0017AAB4 /* Task.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Task.swift; sourceTree = "<group>"; };
+		9698326F29479DF70017AAB4 /* TaskDefaultHelper.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TaskDefaultHelper.swift; sourceTree = "<group>"; };
 		969EABA529421D7000984EB1 /* InitialTasks.storyboard */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; path = InitialTasks.storyboard; sourceTree = "<group>"; };
 		969EABA729422DB400984EB1 /* LoginViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LoginViewController.swift; sourceTree = "<group>"; };
 		969EABA929422DEA00984EB1 /* ListTaskViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ListTaskViewController.swift; sourceTree = "<group>"; };
@@ -193,6 +197,8 @@
 		9692BBC7294142C500CAF3CC /* Model */ = {
 			isa = PBXGroup;
 			children = (
+				9698326D29479CEF0017AAB4 /* Task.swift */,
+				9698326F29479DF70017AAB4 /* TaskDefaultHelper.swift */,
 			);
 			path = Model;
 			sourceTree = "<group>";
@@ -497,8 +503,10 @@
 			files = (
 				969EABA829422DB400984EB1 /* LoginViewController.swift in Sources */,
 				96AACE3E29476E6500BC0C2A /* Date.swift in Sources */,
+				9698327029479DF70017AAB4 /* TaskDefaultHelper.swift in Sources */,
 				96AACE3B29475A4D00BC0C2A /* TimePickerController.swift in Sources */,
 				9697C85B29425C6400B37015 /* TaskTableCell.swift in Sources */,
+				9698326E29479CEF0017AAB4 /* Task.swift in Sources */,
 				9692BB97294141A400CAF3CC /* ViewController.swift in Sources */,
 				9697C858294251CF00B37015 /* EmptyTableCell.swift in Sources */,
 				9692BB93294141A400CAF3CC /* AppDelegate.swift in Sources */,
