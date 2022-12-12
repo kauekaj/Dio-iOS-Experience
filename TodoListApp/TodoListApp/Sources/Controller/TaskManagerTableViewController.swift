@@ -108,11 +108,11 @@ extension TaskManagerTableViewController: TimePickerProtocol {
 
 extension TaskManagerTableViewController: FSCalendarDelegate, FSCalendarDelegateAppearance {
     func calendar(_ calendar: FSCalendar, didSelect date: Date, at monthPosition: FSCalendarMonthPosition) {
-        self.date = Date().convertdateToString(date: date, dateFormatter: "dd/MM/yyyy")
+        self.date = Date().convertDateToString(date: date, dateFormatter: "dd/MM/yyyy")
     }
     
     func calendar(_ calendar: FSCalendar, appearance: FSCalendarAppearance, fillDefaultColorFor date: Date) -> UIColor? {
-        let auxDate = Date().convertdateToString(date: date, dateFormatter: "dd/MM/yyyy")
+        let auxDate = Date().convertDateToString(date: date, dateFormatter: "dd/MM/yyyy")
         if self.task != nil {
             if self.date == auxDate {
                 return .green
@@ -122,7 +122,7 @@ extension TaskManagerTableViewController: FSCalendarDelegate, FSCalendarDelegate
     }
     
     func calendar(_ calendar: FSCalendar, appearance: FSCalendarAppearance, titleDefaultColorFor date: Date) -> UIColor? {
-        let auxDate = Date().convertdateToString(date: date, dateFormatter: "dd/MM/yyyy")
+        let auxDate = Date().convertDateToString(date: date, dateFormatter: "dd/MM/yyyy")
         if self.task != nil {
             if self.date == auxDate {
                 return .black

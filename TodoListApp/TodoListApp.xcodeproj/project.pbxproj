@@ -128,6 +128,15 @@
 			path = Pods;
 			sourceTree = "<group>";
 		};
+		966564552947DF7C00B25600 /* Delegate */ = {
+			isa = PBXGroup;
+			children = (
+				9692BB94294141A400CAF3CC /* SceneDelegate.swift */,
+				9692BB92294141A400CAF3CC /* AppDelegate.swift */,
+			);
+			path = Delegate;
+			sourceTree = "<group>";
+		};
 		9692BB86294141A400CAF3CC = {
 			isa = PBXGroup;
 			children = (
@@ -153,9 +162,8 @@
 		9692BB91294141A400CAF3CC /* TodoListApp */ = {
 			isa = PBXGroup;
 			children = (
+				966564552947DF7C00B25600 /* Delegate */,
 				9692BBC62941426F00CAF3CC /* Sources */,
-				9692BB92294141A400CAF3CC /* AppDelegate.swift */,
-				9692BB94294141A400CAF3CC /* SceneDelegate.swift */,
 				9692BB96294141A400CAF3CC /* ViewController.swift */,
 				9692BB98294141A400CAF3CC /* Main.storyboard */,
 				9692BB9B294141A400CAF3CC /* Assets.xcassets */,
